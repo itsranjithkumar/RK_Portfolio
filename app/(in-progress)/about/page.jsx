@@ -41,7 +41,7 @@ export default function About() {
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ delay: 0.5, type: "spring" }}
-                className="absolute -top-8 right-24 w-12 h-12 text-yellow-400"
+                className="absolute -top-8 right-24 w-12 h-12 text-yellow-400 animate-pulse"
               >
                 ✦
               </motion.div>
@@ -52,48 +52,62 @@ export default function About() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
-                className="space-y-3"
+                className="space-y-6"
               >
-                <p className="text-blue-600 font-medium text-lg">Frontend Developer & Designer</p>
-                <p className="text-2xl md:text-3xl text-neutral-600 max-w-2xl font-light">
-                  Hi, I'm <span className="font-normal text-neutral-800">Ranjith Kumar</span>. I craft 
-                  <motion.span
-                    animate={{
-                      opacity: [1, 0.7, 1],
-                    }}
-                    transition={{
-                      duration: 2,
-                      repeat: Number.POSITIVE_INFINITY,
-                    }}
-                    className="mx-2 text-blue-600"
-                  >
-                    immersive digital experiences
-                  </motion.span> 
-                  through code and creativity.
-                </p>
+                <motion.p 
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.4 }}
+                  className="text-blue-600 font-medium text-xl tracking-wide"
+                >
+                  Frontend Developer & Creative Designer
+                </motion.p>
+                <div className="space-y-4">
+                  <p className="text-3xl md:text-4xl text-neutral-600 max-w-2xl font-light leading-tight">
+                    Hi, I'm <span className="font-normal text-neutral-800">Ranjith Kumar</span>. 
+                  </p>
+                  <p className="text-3xl md:text-4xl text-neutral-600 max-w-2xl font-light leading-tight">
+                    I craft 
+                    <motion.span
+                      animate={{
+                        opacity: [1, 0.7, 1],
+                        scale: [1, 1.02, 1],
+                      }}
+                      transition={{
+                        duration: 2,
+                        repeat: Number.POSITIVE_INFINITY,
+                      }}
+                      className="mx-2 text-blue-600 font-normal"
+                    >
+                      immersive digital experiences
+                    </motion.span> 
+                    through code and creativity.
+                  </p>
+                </div>
               </motion.div>
 
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 }}
-                className="text-xl text-neutral-500 max-w-2xl leading-relaxed"
+                className="text-xl text-neutral-500 max-w-2xl leading-relaxed border-l-4 border-blue-600 pl-6"
               >
-                Specializing in fluid animations and intuitive interactions, I transform ideas into 
-                captivating websites that leave a lasting impression.
+                Specializing in fluid animations and intuitive interactions, 
+                I transform ideas into captivating websites that leave a lasting impression.
               </motion.p>
 
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.7 }}
-                className="flex items-center gap-4 pt-4"
+                className="pt-6"
               >
-                <button className="px-8 py-4 bg-neutral-900 text-white rounded-lg flex items-center gap-2 hover:bg-neutral-800 transition-colors">
-                  View Projects <ArrowRight className="w-4 h-4" />
-                </button>
-                <a href="#contact" className="text-neutral-600 hover:text-neutral-800 transition-colors">
-                  Let's talk →
+                <a 
+                  href="#contact" 
+                  className="text-lg text-neutral-800 hover:text-blue-600 transition-colors flex items-center gap-2 group"
+                >
+                  Let's create something amazing 
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </a>
               </motion.div>
             </div>
@@ -135,9 +149,17 @@ export default function About() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-4xl md:text-5xl font-normal text-neutral-800 mb-24"
+            className="text-[60px] md:text-[130px] font-bold text-neutral-800 leading-none tracking-tighter mb-24 flex items-baseline gap-4"
           >
-            I can help you with ...
+            I can help you with
+            <motion.span
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ delay: 0.3 }}
+              className="text-blue-600"
+            >
+              ...
+            </motion.span>
           </motion.h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-20">
@@ -192,16 +214,16 @@ export default function About() {
       {/* Modern Development Section */}
       <section className="py-32 relative bg-white">
         <div className="max-w-[1400px] mx-auto px-4">
-          {/* Main Title - Restored */}
+          {/* Main Title - Left Aligned */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="mb-32 text-center"
+            className="mb-32"
           >
             <motion.h2 
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              className="text-[120px] md:text-[180px] font-bold text-black leading-none tracking-tighter"
+              className="text-[60px] md:text-[130px] font-bold text-neutral-800 leading-none tracking-tighter flex items-baseline"
             >
               Develop<span className="text-neutral-300">ment</span>
             </motion.h2>
@@ -209,7 +231,7 @@ export default function About() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="text-neutral-600 text-xl mt-8 max-w-2xl mx-auto"
+              className="text-neutral-600 text-xl mt-8 max-w-2xl"
             >
               Creating exceptional digital experiences with clean, efficient, and maintainable code.
             </motion.p>
