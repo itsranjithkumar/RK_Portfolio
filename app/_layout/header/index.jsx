@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { MoveDownRight } from 'lucide-react';
-import { CldImage } from 'next-cloudinary';
+import Image from 'next/image';
 
 import { ParallaxSlider } from '@/components';
 
@@ -16,8 +16,8 @@ export function Header() {
       initial='initial'
       animate='enter'
     >
-      <CldImage
-        src='Dennis-Portfolio/images/lapetmmek4fymz68m4u8'
+      <Image
+        src="/images/header-image.jpg"
         className='object-cover md:scale-125 md:object-contain'
         fill={true}
         sizes='100vw'

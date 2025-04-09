@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { ArrowDownLeft } from 'lucide-react';
 import Link from 'next/link';
-import { CldImage } from 'next-cloudinary';
+import Image from 'next/image';
 
 import { MagneticButton } from '@/components';
 
@@ -19,14 +19,14 @@ export function UserDetails({ transformX }) {
       <Row>
         <div className='flex items-center gap-8'>
           <ImageWrapper>
-            <CldImage
-              src='Dennis-Portfolio/images/mqtwxh5znybowgaljrbp'
+            <Image
+              src="/images/profile-picture.jpg"
               className='rounded-full object-cover'
               fill={true}
               alt='Dennis Snellenberg Profile Picture'
             />
           </ImageWrapper>
-          <MainTitle>Let’s work</MainTitle>
+          <MainTitle>Let's work</MainTitle>
         </div>
         <div className='flex items-center justify-between'>
           <MainTitle>together</MainTitle>
