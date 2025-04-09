@@ -2,19 +2,19 @@ export const projectOptions = {
   first: [
     {
       type: 'image',
-      source: '/images/project1-image1.jpg',
+      source: '/pm.jpg',
     },
     {
       type: 'video',
-      source: '/videos/project1-video1.mp4',
+      source: '/pm.jpg',
     },
     {
       type: 'image',
-      source: '/images/project1-image2.jpg',
+      source: '/pm.jpg',
     },
     {
       type: 'video',
-      source: '/videos/project1-video2.mp4',
+      source: '/pm.jpg',
     },
   ],
   second: [
