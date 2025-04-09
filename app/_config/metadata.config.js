@@ -7,18 +7,18 @@ export const rootMetadata = {
   },
   description:
     'Helping brands thrive in the digital world. Located in The Netherlands. Delivering tailor-made digital designs and building interactive websites from scratch. © Code by Dennis',
-  generator: 'Dennis Snellenberg',
-  applicationName: 'Dennis Snellenberg',
+  generator: 'Ranjith Kumar',
+  applicationName: 'Ranjith Kumar',
   referrer: 'origin-when-cross-origin',
   keywords: ['Design', 'Develope', 'Freelance'],
   authors: [
-    { name: 'Ali Bagheri', url: 'https://www.github.com/alibagheri2079' },
+    { name: 'Ranjith Kumar', url: 'https://www.github.com/itsranjithkumar' },
   ],
-  creator: 'Ali Bagheri',
-  publisher: 'Ali Bagheri',
+  creator: 'Ranjith Kumar',
+  publisher: 'Ranjith Kumar',
   twitter: {
     card: 'summary_large_image',
-    title: 'Dennis Snellenberg',
+    title: 'Ranjith Kumar',
     description:
       'Helping brands thrive in the digital world. Located in The Netherlands. Delivering tailor-made digital designs and building interactive websites from scratch. © Code by Dennis',
     siteId: '1467726470533754880',

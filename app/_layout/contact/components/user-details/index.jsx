@@ -23,7 +23,7 @@ export function UserDetails({ transformX }) {
               src="/images/profile-picture.jpg"
               className='rounded-full object-cover'
               fill={true}
-              alt='Dennis Snellenberg Profile Picture'
+              alt='Ranjith Kumar Profile Picture'
             />
           </ImageWrapper>
           <MainTitle>Let's work</MainTitle>
