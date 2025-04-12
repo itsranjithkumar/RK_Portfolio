@@ -2,37 +2,37 @@ export const projectOptions = {
   first: [
     {
       type: 'image',
-      source: '/pm.jpg',
+      source: '/apple.png',
     },
     {
       type: 'video',
-      source: '/pm.jpg',
+      source: '/apple1.mp4',
     },
     {
       type: 'image',
-      source: '/pm.jpg',
+      source: '/interior1.png',
     },
     {
       type: 'video',
-      source: '/pm.jpg',
+      source: '/video.mp4',
     },
   ],
   second: [
     {
       type: 'image',
-      source: '/images/project2-image1.jpg',
+      source: '/pm.jpg',
     },
     {
       type: 'video',
-      source: '/videos/project2-video1.mp4',
+      source: '/apple.mp4',
     },
     {
       type: 'image',
-      source: '/images/project2-image2.jpg',
+      source: '/pm.jpg',
     },
     {
       type: 'video',
-      source: '/videos/project2-video2.mp4',
+      source: '/apple.mp4',
     },
   ],
 };

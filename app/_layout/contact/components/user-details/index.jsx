@@ -2,8 +2,8 @@
 
 import { motion } from 'framer-motion';
 import { ArrowDownLeft } from 'lucide-react';
-import Link from 'next/link';
 import Image from 'next/image';
+import Link from 'next/link';
 
 import { MagneticButton } from '@/components';
 
@@ -26,7 +26,7 @@ export function UserDetails({ transformX }) {
               alt='Ranjith Kumar Profile Picture'
             />
           </ImageWrapper>
-          <MainTitle>Let's work</MainTitle>
+          <MainTitle>Let&apos;s work</MainTitle>
         </div>
         <div className='flex items-center justify-between'>
           <MainTitle>together</MainTitle>

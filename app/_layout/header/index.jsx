@@ -17,9 +17,11 @@ export function Header() {
       animate='enter'
     >
       <Image
-        src="/images/header-image.jpg"
-        className='object-cover md:scale-125 md:object-contain'
+        src="/image2.jpg"
+        className='object-cover w-full h-full'
         fill={true}
+        priority={true}
+        quality={100}
         sizes='100vw'
         alt='Ranjith Kumar Personal Picture'
       />

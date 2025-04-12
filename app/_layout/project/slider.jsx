@@ -10,41 +10,24 @@ import { Center } from '@/components';
  * @param {string} props.source
  */
 export function ProjectSlider({ type, source }) {
-  const image =
-    type === 'image' ? (
-      <Image
-        src={source}
-        className='object-cover'
-        fill={true}
-        alt='project items'
-      />
-    ) : null;
-  const video =
-    type === 'video' ? (
-      <video
-        src={source}
-        loop
-        controls={false}
-        muted
-        autoPlay
-        style={{
-          width: '100%',
-          height: '100%'
-        }}
-        className='!static !bg-transparent'
-      />
-    ) : null;
-
   return (
-    <Center
-      className='relative w-1/4 rounded'
-      style={{
-        minWidth: '150px',
-        height: '20vw',
-      }}
-    >
-      {image}
-      {video}
-    </Center>
+    <div className="media-box relative w-[400px] h-[300px] flex items-center justify-center bg-black overflow-hidden">
+      {type === 'image' ? (
+        <img 
+          src={source} 
+          alt=""
+          className="w-full h-full object-cover"
+        />
+      ) : (
+        <video 
+          src={source}
+          className="min-w-full min-h-full max-w-none w-auto h-auto object-contain"
+          autoPlay
+          muted
+          loop
+          playsInline
+        />
+      )}
+    </div>
   );
 }

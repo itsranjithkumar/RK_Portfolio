@@ -1,7 +1,7 @@
 "use client"
-import { motion, useTransform, useScroll } from "framer-motion"
-import Image from "next/image"
+import { motion, useScroll, useTransform } from "framer-motion"
 import { ArrowRight } from "lucide-react"
+import Image from "next/image"
 
 export default function About() {
   const { scrollYProgress } = useScroll()
@@ -10,8 +10,9 @@ export default function About() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section with Large HELLO */}
-      <section className="relative min-h-screen flex items-center px-4 md:px-20 py-20">
-        <div className="w-full max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <section className="relative flex min-h-screen items-center px-4 py-20 md:px-20">
+        <div className="mx-auto max-w-[1400px] px-4">
+        <div className="mx-auto grid w-full max-w-[1400px] grid-cols-1 items-center gap-8 md:grid-cols-2">
           {/* Left side - Text */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -20,28 +21,28 @@ export default function About() {
             className="relative z-10"
           >
             <div className="relative">
-              <h1 className="text-[130px] md:text-[200px] font-bold leading-none tracking-tighter text-neutral-800 flex items-center">
-                HELL
-                <motion.span
-                  animate={{
-                    y: [0, -30, 0],
-                  }}
-                  transition={{
-                    duration: 1.5,
-                    repeat: Number.POSITIVE_INFINITY,
-                    repeatType: "loop",
-                    ease: "easeInOut",
-                  }}
-                  className="text-blue-600"
-                >
-                  O
-                </motion.span>
-              </h1>
+                <h1 className="flex items-center text-[130px] font-bold leading-none tracking-tighter text-neutral-800 md:text-[200px]">
+              HELL
+              <motion.span
+                animate={{
+                  y: [0, -30, 0],
+                }}
+                transition={{
+                  duration: 1.5,
+                  repeat: Number.POSITIVE_INFINITY,
+                  repeatType: "loop",
+                  ease: "easeInOut",
+                }}
+                  className="text-sky-500"
+              >
+                O
+              </motion.span>
+            </h1>
               <motion.div 
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ delay: 0.5, type: "spring" }}
-                className="absolute -top-8 right-24 w-12 h-12 text-yellow-400 animate-pulse"
+                  className="absolute -top-8 right-24 animate-pulse size-12 text-yellow-400"
               >
                 ✦
               </motion.div>
@@ -58,87 +59,106 @@ export default function About() {
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.4 }}
-                  className="text-blue-600 font-medium text-xl tracking-wide"
+                  className="font-medium text-xl tracking-wide text-sky-500"
                 >
                   Frontend Developer & Creative Designer
-                </motion.p>
+              </motion.p>
                 <div className="space-y-4">
                   <p className="text-3xl md:text-4xl text-neutral-600 max-w-2xl font-light leading-tight">
-                    Hi, I'm <span className="font-normal text-neutral-800">Ranjith Kumar</span>. 
-                  </p>
-                  <p className="text-3xl md:text-4xl text-neutral-600 max-w-2xl font-light leading-tight">
-                    I craft 
-                    <motion.span
-                      animate={{
-                        opacity: [1, 0.7, 1],
-                        scale: [1, 1.02, 1],
-                      }}
-                      transition={{
-                        duration: 2,
-                        repeat: Number.POSITIVE_INFINITY,
-                      }}
-                      className="mx-2 text-blue-600 font-normal"
-                    >
-                      immersive digital experiences
-                    </motion.span> 
-                    through code and creativity.
-                  </p>
-                </div>
-              </motion.div>
+                      I&apos;m <span className="font-normal text-neutral-800">Ranjith Kumar</span>. 
+                    </p>
+                    <p className="text-3xl md:text-4xl text-neutral-600 max-w-2xl font-light leading-tight">
+                      I craft 
+                      <motion.span
+                        animate={{
+                          opacity: [1, 0.7, 1],
+                          scale: [1, 1.02, 1],
+                        }}
+                        transition={{
+                          duration: 2,
+                          repeat: Number.POSITIVE_INFINITY,
+                        }}
+                        className="mx-2 text-sky-500 font-normal"
+                      >
+                        immersive digital experiences
+                      </motion.span> 
+                      through code and creativity.
+                    </p>
+                  </div>
+                </motion.div>
 
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.5 }}
-                className="text-xl text-neutral-500 max-w-2xl leading-relaxed border-l-4 border-blue-600 pl-6"
-              >
-                Specializing in fluid animations and intuitive interactions, 
-                I transform ideas into captivating websites that leave a lasting impression.
-              </motion.p>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.7 }}
-                className="pt-6"
-              >
-                <a 
-                  href="#contact" 
-                  className="text-lg text-neutral-800 hover:text-blue-600 transition-colors flex items-center gap-2 group"
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.5 }}
+                  className="text-xl text-neutral-500 max-w-2xl leading-relaxed border-l-4 border-sky-500 pl-6"
                 >
-                  Let's create something amazing 
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </a>
-              </motion.div>
-            </div>
-          </motion.div>
+                  Building
+                  powerful
+                  digital
+                  solutions
+                  from
+                  front
+                  to
+                  back.
+                  Together
+                  we&apos;ll
+                  create
+                  seamless
+                  experiences.
+                  Always
+                  embracing
+                  innovation
+                  and
+                  modern
+                  technologies.
+                  As a full stack developer, my expertise in both frontend and backend development allows me to craft complete, scalable applications that make a real impact.
+                </motion.div>
 
-          {/* Right side - Image */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
-            className="relative h-[500px] md:h-[600px]"
-          >
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-neutral-50 rounded-2xl" />
-            <Image
-              src="/your-profile-image.jpg"
-              alt="Profile"
-              fill
-              className="object-cover rounded-2xl mix-blend-overlay"
-              priority
-            />
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.7 }}
+                  className="pt-6"
+                >
+                  <a 
+                    href="#contact" 
+                    className="group flex items-center gap-2 text-lg text-neutral-800 transition-colors hover:text-sky-500"
+                  >
+                    Let&apos;s create something amazing 
+                    <ArrowRight className="size-5 group-hover:translate-x-1 transition-transform" />
+                  </a>
+                </motion.div>
+              </div>
+            </motion.div>
+
+            {/* Right side - Image */}
             <motion.div
-              animate={{
-                scale: [1, 1.05, 1],
-              }}
-              transition={{
-                duration: 4,
-                repeat: Number.POSITIVE_INFINITY,
-              }}
-              className="absolute inset-0 bg-gradient-to-tr from-transparent via-blue-100/20 to-transparent rounded-2xl"
-            />
-          </motion.div>
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8 }}
+              className="relative h-[500px] md:h-[600px]"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-sky-50 to-neutral-50 rounded-2xl" />
+              <Image
+                src="/your-profile-image.jpg"
+                alt="Profile"
+                fill
+                className="object-cover rounded-2xl mix-blend-overlay"
+                priority
+              />
+              <motion.div
+                animate={{
+                  scale: [1, 1.05, 1],
+                }}
+                transition={{
+                  duration: 4,
+                  repeat: Number.POSITIVE_INFINITY,
+                }}
+                className="absolute inset-0 bg-gradient-to-tr from-transparent via-sky-100/20 to-transparent rounded-2xl"
+              />
+            </motion.div>
+          </div>
         </div>
       </section>
 
@@ -149,17 +169,54 @@ export default function About() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-[60px] md:text-[130px] font-bold text-neutral-800 leading-none tracking-tighter mb-24 flex items-baseline gap-4"
+            className="text-[60px] md:text-[130px] font-bold leading-none tracking-tighter mb-24 flex items-baseline gap-4"
           >
-            I can help you with
-            <motion.span
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ delay: 0.3 }}
-              className="text-blue-600"
-            >
-              ...
-            </motion.span>
+            I can help you
+            <span className="text-neutral-300">with</span>
+            <div className="text-sky-500 flex gap-1">
+              <motion.span
+                animate={{
+                  y: [0, -10, 0]
+                }}
+                transition={{
+                  duration: 1.5,
+                  repeat: Infinity,
+                  repeatType: "loop",
+                  ease: "easeInOut",
+                  delay: 0
+                }}
+              >
+                .
+              </motion.span>
+              <motion.span
+                animate={{
+                  y: [0, -10, 0]
+                }}
+                transition={{
+                  duration: 1.5,
+                  repeat: Infinity,
+                  repeatType: "loop",
+                  ease: "easeInOut",
+                  delay: 0.2
+                }}
+              >
+                .
+              </motion.span>
+              <motion.span
+                animate={{
+                  y: [0, -10, 0]
+                }}
+                transition={{
+                  duration: 1.5,
+                  repeat: Infinity,
+                  repeatType: "loop",
+                  ease: "easeInOut",
+                  delay: 0.4
+                }}
+              >
+                .
+              </motion.span>
+            </div>
           </motion.h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-20">
@@ -168,14 +225,30 @@ export default function About() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="space-y-8"
+              className="group relative"
             >
-              <div className="text-neutral-500 text-lg">01</div>
-              <h3 className="text-3xl font-normal text-neutral-800">Design</h3>
-              <p className="text-lg text-neutral-600 leading-relaxed">
-                With a solid track record in designing websites, I deliver strong and user-friendly digital designs.
-                (Since 2024 only in combination with development)
-              </p>
+              <div className="space-y-6">
+                <div className="flex items-center gap-4">
+                  <span className="text-7xl font-bold text-neutral-200">01</span>
+                  <motion.span 
+                    animate={{ rotate: 360 }}
+                    transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                    className="text-yellow-400 text-xl"
+                  >
+                    ✦
+                  </motion.span>
+                </div>
+                
+                <motion.div
+                  className="relative rounded-xl border border-neutral-200 bg-neutral-50 p-4 transition-all duration-300 group hover:border-sky-500"
+                >
+                  <h3 className="text-4xl font-normal text-neutral-800">Design</h3>
+                  <p className="text-lg text-neutral-600 leading-relaxed">
+                    With a solid track record in designing websites, I deliver strong and user-friendly digital designs.
+                    <span className="block mt-2 text-neutral-400">(Since 2024 only in combination with development)</span>
+                  </p>
+                </motion.div>
+              </div>
             </motion.div>
 
             {/* Development */}
@@ -183,14 +256,23 @@ export default function About() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="space-y-8"
+              className="group relative"
             >
-              <div className="text-neutral-500 text-lg">02</div>
-              <h3 className="text-3xl font-normal text-neutral-800">Development</h3>
-              <p className="text-lg text-neutral-600 leading-relaxed">
-                I build scalable websites from scratch that fit seamlessly with design. My focus is on micro animations,
-                transitions and interaction. Building with Next.js and modern web technologies.
-              </p>
+              <div className="space-y-6">
+                <div className="flex items-center gap-4">
+                  <span className="text-7xl font-bold text-neutral-200">02</span>
+                </div>
+                
+                <motion.div
+                  className="relative rounded-xl border border-neutral-200 bg-neutral-50 p-4 transition-all duration-300 group hover:border-sky-500"
+                >
+                  <h3 className="text-4xl font-normal text-neutral-800">Development</h3>
+                  <p className="text-lg text-neutral-600 leading-relaxed">
+                    I build scalable websites from scratch that fit seamlessly with design. My focus is on micro animations,
+                    transitions and interaction. Building with Next.js and modern web technologies.
+                  </p>
+                </motion.div>
+              </div>
             </motion.div>
 
             {/* Full Package */}
@@ -198,15 +280,35 @@ export default function About() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="space-y-8"
+              className="group relative"
             >
-              <div className="text-neutral-500 text-lg">03</div>
-              <h3 className="text-3xl font-normal text-neutral-800">✦ The full package</h3>
-              <p className="text-lg text-neutral-600 leading-relaxed">
-                A complete website from concept to implementation, that's what makes me stand out. My great sense for
-                design and my development skills enable me to create kick-ass projects.
-              </p>
+              <div className="space-y-6">
+                <div className="flex items-center gap-4">
+                  <span className="text-7xl font-bold text-neutral-200">03</span>
+                  <span className="text-xl">✦</span>
+                </div>
+                
+                <motion.div
+                  className="relative rounded-xl border border-neutral-200 bg-neutral-50 p-4 transition-all duration-300 group hover:border-sky-500"
+                >
+                  <h3 className="text-4xl font-normal text-neutral-800">The Full Package</h3>
+                  <p className="text-lg text-neutral-600 leading-relaxed">
+                    A complete website from concept to implementation, that&apos;s what makes me stand out. My great sense for
+                    design and my development skills enable me to create kick-ass projects.
+                  </p>
+                </motion.div>
+              </div>
             </motion.div>
+          </div>
+
+          {/* Loading Line */}
+          <div className="w-full h-px bg-neutral-200 mt-32 overflow-hidden">
+            <motion.div
+              initial={{ width: "0%" }}
+              whileInView={{ width: "100%" }}
+              transition={{ duration: 2.5, ease: "easeInOut" }}
+              className="h-full bg-gradient-to-r from-sky-500 via-neutral-800 to-sky-500"
+            />
           </div>
         </div>
       </section>
@@ -252,15 +354,28 @@ export default function About() {
                   <p className="text-neutral-400 text-lg">Architecture</p>
                 </div>
                 {/* Skills */}
-                <div className="md:w-1/2 grid grid-cols-2 gap-6">
+                <div className="md:w-1/2 grid grid-cols-2 gap-4">
                   {["React", "Next.js", "TypeScript", "Tailwind CSS"].map((skill) => (
                     <motion.div
                       key={skill}
                       initial={{ opacity: 0 }}
                       whileInView={{ opacity: 1 }}
-                      className="relative"
+                      whileHover={{ scale: 1.05 }}
+                      className="relative bg-neutral-50 border border-neutral-200 rounded-xl p-4 group hover:border-sky-500 transition-all duration-300"
                     >
-                      <span className="text-lg text-neutral-600">{skill}</span>
+                      <div className="flex items-center gap-3">
+                        <span className="font-medium text-lg text-sky-500">
+                          {skill}
+                        </span>
+                        <motion.span
+                          initial={{ opacity: 0 }}
+                          whileHover={{ opacity: 1 }}
+                          className="text-sky-500 text-sm"
+                        >
+                          →
+                        </motion.span>
+                      </div>
+                      <div className="absolute inset-0 bg-sky-50/0 group-hover:bg-sky-50/50 rounded-xl transition-colors duration-300" />
                     </motion.div>
                   ))}
                 </div>
@@ -270,7 +385,7 @@ export default function About() {
                     <span className="text-sm font-medium">Proficiency</span>
                     <span className="text-sm text-neutral-400">95%</span>
                   </div>
-                  <div className="h-1 w-full bg-neutral-100 rounded-full overflow-hidden">
+                  <div className="h-1 w-full overflow-hidden rounded-full bg-neutral-100">
                     <motion.div
                       initial={{ width: 0 }}
                       whileInView={{ width: "95%" }}
@@ -295,15 +410,28 @@ export default function About() {
                   <p className="text-neutral-400 text-lg">Development</p>
                 </div>
                 {/* Skills */}
-                <div className="md:w-1/2 grid grid-cols-2 gap-6">
+                <div className="md:w-1/2 grid grid-cols-2 gap-4">
                   {["FastAPI", "Python", "Node.js", "REST APIs"].map((skill) => (
                     <motion.div
                       key={skill}
                       initial={{ opacity: 0 }}
                       whileInView={{ opacity: 1 }}
-                      className="relative"
+                      whileHover={{ scale: 1.05 }}
+                      className="relative bg-neutral-50 border border-neutral-200 rounded-xl p-4 group hover:border-sky-500 transition-all duration-300"
                     >
-                      <span className="text-lg text-neutral-600">{skill}</span>
+                      <div className="flex items-center gap-3">
+                        <span className="font-medium text-lg text-sky-500">
+                          {skill}
+                        </span>
+                        <motion.span
+                          initial={{ opacity: 0 }}
+                          whileHover={{ opacity: 1 }}
+                          className="text-sky-500 text-sm"
+                        >
+                          →
+                        </motion.span>
+                      </div>
+                      <div className="absolute inset-0 bg-sky-50/0 group-hover:bg-sky-50/50 rounded-xl transition-colors duration-300" />
                     </motion.div>
                   ))}
                 </div>
@@ -313,7 +441,7 @@ export default function About() {
                     <span className="text-sm font-medium">Proficiency</span>
                     <span className="text-sm text-neutral-400">90%</span>
                   </div>
-                  <div className="h-1 w-full bg-neutral-100 rounded-full overflow-hidden">
+                  <div className="h-1 w-full overflow-hidden rounded-full bg-neutral-100">
                     <motion.div
                       initial={{ width: 0 }}
                       whileInView={{ width: "90%" }}
@@ -338,15 +466,28 @@ export default function About() {
                   <p className="text-neutral-400 text-lg">Management</p>
                 </div>
                 {/* Skills */}
-                <div className="md:w-1/2 grid grid-cols-2 gap-6">
+                <div className="md:w-1/2 grid grid-cols-2 gap-4">
                   {["MongoDB", "PostgreSQL", "Database Design", "Data Modeling"].map((skill) => (
                     <motion.div
                       key={skill}
                       initial={{ opacity: 0 }}
                       whileInView={{ opacity: 1 }}
-                      className="relative"
+                      whileHover={{ scale: 1.05 }}
+                      className="relative bg-neutral-50 border border-neutral-200 rounded-xl p-4 group hover:border-sky-500 transition-all duration-300"
                     >
-                      <span className="text-lg text-neutral-600">{skill}</span>
+                      <div className="flex items-center gap-3">
+                        <span className="font-medium text-lg text-sky-500">
+                          {skill}
+                        </span>
+                        <motion.span
+                          initial={{ opacity: 0 }}
+                          whileHover={{ opacity: 1 }}
+                          className="text-sky-500 text-sm"
+                        >
+                          →
+                        </motion.span>
+                      </div>
+                      <div className="absolute inset-0 bg-sky-50/0 group-hover:bg-sky-50/50 rounded-xl transition-colors duration-300" />
                     </motion.div>
                   ))}
                 </div>
@@ -356,7 +497,7 @@ export default function About() {
                     <span className="text-sm font-medium">Proficiency</span>
                     <span className="text-sm text-neutral-400">85%</span>
                   </div>
-                  <div className="h-1 w-full bg-neutral-100 rounded-full overflow-hidden">
+                  <div className="h-1 w-full overflow-hidden rounded-full bg-neutral-100">
                     <motion.div
                       initial={{ width: 0 }}
                       whileInView={{ width: "85%" }}
@@ -367,6 +508,189 @@ export default function About() {
                 </div>
               </div>
             </motion.div>
+          </div>
+
+          {/* Loading Line */}
+          <div className="w-full h-px bg-neutral-200 mt-32 overflow-hidden">
+            <motion.div
+              initial={{ width: "0%" }}
+              whileInView={{ width: "100%" }}
+              transition={{ duration: 2.5, ease: "easeInOut" }}
+              className="h-full bg-gradient-to-r from-sky-500 via-neutral-800 to-sky-500"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Experience & Education Section */}
+      <section className="py-32 px-4 md:px-20 bg-neutral-100">
+        <div className="max-w-[1400px] mx-auto">
+          {/* Experience Title */}
+          <motion.h2 
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            className="text-[60px] md:text-[130px] font-bold text-neutral-800 leading-none tracking-tighter flex items-baseline mb-24"
+          >
+            Experi<span className="text-neutral-300">ence</span>
+            <motion.span 
+              animate={{ rotate: 360 }}
+              transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+              className="text-yellow-400 text-xl ml-4"
+            >
+              ✦
+            </motion.span>
+          </motion.h2>
+
+          {/* Experience Timeline */}
+          <div className="grid grid-cols-1 gap-20 mb-32">
+            {/* Experience Item */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              className="relative group"
+            >
+              <div className="flex flex-col md:flex-row gap-8 md:gap-16">
+                <div className="md:w-1/4">
+                  <div className="sticky top-20 space-y-4">
+                    <motion.div 
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      className="flex items-center gap-4"
+                    >
+                      <span className="text-7xl font-bold text-neutral-200">01</span>
+                    </motion.div>
+                    <div className="space-y-2">
+                      <span className="text-sky-500 font-medium text-lg">2022 - Present</span>
+                      <h3 className="text-3xl font-bold text-neutral-800">Senior Frontend Developer</h3>
+                      <p className="text-neutral-400 text-lg">Company Name</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="md:w-3/4 relative">
+                  <div className="absolute -left-8 h-full w-1 bg-neutral-200 rounded-full">
+                    <motion.div 
+                      initial={{ height: 0 }}
+                      whileInView={{ height: "100%" }}
+                      transition={{ duration: 1.5 }}
+                      className="w-full bg-gradient-to-b from-sky-500 to-neutral-800 rounded-full"
+                    />
+                  </div>
+                  <div className="space-y-8">
+                    <p className="text-xl text-neutral-600 leading-relaxed">
+                      Led the development of multiple high-impact web applications using Next.js and React.
+                      Implemented complex animations and interactive features that enhanced user engagement.
+                      Mentored junior developers and established best practices for the frontend team.
+                    </p>
+                    <div className="pt-6">
+                      <div className="text-sm text-neutral-400 mb-3">Technologies Used</div>
+                      <div className="flex flex-wrap gap-2">
+                        {["Next.js", "React", "TypeScript", "Framer Motion", "TailwindCSS", "Node.js"].map((tech, index) => (
+                          <motion.span
+                            key={tech}
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            whileHover={{ scale: 1.05 }}
+                            transition={{ delay: index * 0.1 }}
+                            className="px-4 py-2 bg-white border border-neutral-200 text-neutral-600 rounded-xl hover:border-sky-500 hover:text-sky-500 transition-all duration-300"
+                          >
+                            {tech}
+                          </motion.span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Add more experience items here */}
+          </div>
+
+          {/* Education Title */}
+          <motion.h2 
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            className="text-[60px] md:text-[130px] font-bold text-neutral-800 leading-none tracking-tighter flex items-baseline mb-24"
+          >
+            Edu<span className="text-neutral-300">cation</span>
+            <motion.span 
+              animate={{ rotate: 360 }}
+              transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+              className="text-sky-500 text-xl ml-4"
+            >
+              ✦
+            </motion.span>
+          </motion.h2>
+
+          {/* Education Timeline */}
+          <div className="grid grid-cols-1 gap-20">
+            {/* Education Item */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              className="relative group"
+            >
+              <div className="flex flex-col md:flex-row gap-8 md:gap-16">
+                <div className="md:w-1/4">
+                  <div className="sticky top-20 space-y-4">
+                    <motion.div 
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      className="flex items-center gap-4"
+                    >
+                      <span className="text-7xl font-bold text-neutral-200">01</span>
+                    </motion.div>
+                    <div className="space-y-2">
+                      <span className="text-sky-500 font-medium text-lg">2018 - 2022</span>
+                      <h3 className="text-3xl font-bold text-neutral-800">Bachelor of Technology</h3>
+                      <p className="text-neutral-400 text-lg">University Name</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="md:w-3/4 relative">
+                  <div className="absolute -left-8 h-full w-1 bg-neutral-200 rounded-full">
+                    <motion.div 
+                      initial={{ height: 0 }}
+                      whileInView={{ height: "100%" }}
+                      transition={{ duration: 1.5 }}
+                      className="w-full bg-gradient-to-b from-sky-500 to-neutral-800 rounded-full"
+                    />
+                  </div>
+                  <div className="space-y-8">
+                    <p className="text-xl text-neutral-600 leading-relaxed">
+                      Computer Science and Engineering with focus on Web Technologies and Software Architecture
+                    </p>
+                    <div className="pt-6">
+                      <div className="text-sm text-neutral-400 mb-3">Key Courses</div>
+                      <div className="flex flex-wrap gap-2">
+                        {["Web Development", "Data Structures", "Algorithms", "Database Management", "System Design", "UI/UX"].map((course, index) => (
+                          <motion.span
+                            key={course}
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            whileHover={{ scale: 1.05 }}
+                            transition={{ delay: index * 0.1 }}
+                            className="px-4 py-2 bg-white border border-neutral-200 text-neutral-600 rounded-xl hover:border-sky-500 hover:text-sky-500 transition-all duration-300"
+                          >
+                            {course}
+                          </motion.span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Loading Line */}
+          <div className="w-full h-px bg-neutral-200 mt-32 overflow-hidden">
+            <motion.div
+              initial={{ width: "0%" }}
+              whileInView={{ width: "100%" }}
+              transition={{ duration: 2.5, ease: "easeInOut" }}
+              className="h-full bg-gradient-to-r from-sky-500 via-neutral-800 to-sky-500"
+            />
           </div>
         </div>
       </section>
