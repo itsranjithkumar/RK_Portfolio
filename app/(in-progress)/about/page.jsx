@@ -361,21 +361,21 @@ export default function About() {
                       initial={{ opacity: 0 }}
                       whileInView={{ opacity: 1 }}
                       whileHover={{ scale: 1.05 }}
-                      className="relative bg-neutral-50 border border-neutral-200 rounded-xl p-4 group hover:border-sky-500 transition-all duration-300"
+                      className="relative bg-neutral-50 border border-neutral-200 rounded-xl p-4 group hover:border-neutral-800 transition-all duration-300"
                     >
                       <div className="flex items-center gap-3">
-                        <span className="font-medium text-lg text-sky-500">
+                        <span className="font-medium text-lg text-neutral-800 group-hover:text-white transition-colors duration-300 relative z-10">
                           {skill}
                         </span>
                         <motion.span
                           initial={{ opacity: 0 }}
                           whileHover={{ opacity: 1 }}
-                          className="text-sky-500 text-sm"
+                          className="text-neutral-800 group-hover:text-white text-sm transition-colors duration-300 relative z-10"
                         >
                           →
                         </motion.span>
                       </div>
-                      <div className="absolute inset-0 bg-sky-50/0 group-hover:bg-sky-50/50 rounded-xl transition-colors duration-300" />
+                      <div className="absolute inset-0 bg-neutral-50/0 group-hover:bg-neutral-800 rounded-xl transition-colors duration-300" />
                     </motion.div>
                   ))}
                 </div>
@@ -417,21 +417,21 @@ export default function About() {
                       initial={{ opacity: 0 }}
                       whileInView={{ opacity: 1 }}
                       whileHover={{ scale: 1.05 }}
-                      className="relative bg-neutral-50 border border-neutral-200 rounded-xl p-4 group hover:border-sky-500 transition-all duration-300"
+                      className="relative bg-neutral-50 border border-neutral-200 rounded-xl p-4 group hover:border-neutral-800 transition-all duration-300"
                     >
                       <div className="flex items-center gap-3">
-                        <span className="font-medium text-lg text-sky-500">
+                        <span className="font-medium text-lg text-neutral-800 group-hover:text-white transition-colors duration-300 relative z-10">
                           {skill}
                         </span>
                         <motion.span
                           initial={{ opacity: 0 }}
                           whileHover={{ opacity: 1 }}
-                          className="text-sky-500 text-sm"
+                          className="text-neutral-800 group-hover:text-white text-sm transition-colors duration-300 relative z-10"
                         >
                           →
                         </motion.span>
                       </div>
-                      <div className="absolute inset-0 bg-sky-50/0 group-hover:bg-sky-50/50 rounded-xl transition-colors duration-300" />
+                      <div className="absolute inset-0 bg-neutral-50/0 group-hover:bg-neutral-800 rounded-xl transition-colors duration-300" />
                     </motion.div>
                   ))}
                 </div>
@@ -473,21 +473,21 @@ export default function About() {
                       initial={{ opacity: 0 }}
                       whileInView={{ opacity: 1 }}
                       whileHover={{ scale: 1.05 }}
-                      className="relative bg-neutral-50 border border-neutral-200 rounded-xl p-4 group hover:border-sky-500 transition-all duration-300"
+                      className="relative bg-neutral-50 border border-neutral-200 rounded-xl p-4 group hover:border-neutral-800 transition-all duration-300"
                     >
                       <div className="flex items-center gap-3">
-                        <span className="font-medium text-lg text-sky-500">
+                        <span className="font-medium text-lg text-neutral-800 group-hover:text-white transition-colors duration-300 relative z-10">
                           {skill}
                         </span>
                         <motion.span
                           initial={{ opacity: 0 }}
                           whileHover={{ opacity: 1 }}
-                          className="text-sky-500 text-sm"
+                          className="text-neutral-800 group-hover:text-white text-sm transition-colors duration-300 relative z-10"
                         >
                           →
                         </motion.span>
                       </div>
-                      <div className="absolute inset-0 bg-sky-50/0 group-hover:bg-sky-50/50 rounded-xl transition-colors duration-300" />
+                      <div className="absolute inset-0 bg-neutral-50/0 group-hover:bg-neutral-800 rounded-xl transition-colors duration-300" />
                     </motion.div>
                   ))}
                 </div>
